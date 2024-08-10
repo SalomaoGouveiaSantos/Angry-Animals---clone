@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0r1u0i32d5cs"]
+
+[ext_resource type="Texture2D" uid="uid://ch6fmbfmpamag" path="res://assets/env/elementWood019.png" id="1_41rql"]
+
+[node name="LaunchArea" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.5, 23.375)
+scale = Vector2(0.271429, 0.576136)
+texture = ExtResource("1_41rql")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(130, 30)
+scale = Vector2(0.289286, 0.346591)
+texture = ExtResource("1_41rql")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(71.75, 76.75)
+rotation = 1.5708
+scale = Vector2(0.292857, 0.618182)
+texture = ExtResource("1_41rql")

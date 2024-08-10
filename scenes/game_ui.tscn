@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmmutonybcih0"]
+
+[ext_resource type="LabelSettings" uid="uid://cvulu7kqp6hlb" path="res://assets/lg_48_gr.tres" id="1_70hoe"]
+[ext_resource type="Script" path="res://scripts/game_ui.gd" id="1_iky7h"]
+[ext_resource type="LabelSettings" uid="uid://bs88pws6dxfqk" path="res://assets/lg_96_bl.tres" id="2_0d5h8"]
+[ext_resource type="FontFile" uid="uid://f2u575a1x8at" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="3_8ew3p"]
+[ext_resource type="AudioStream" uid="uid://br3nl720licnl" path="res://assets/audio/jazzyfrenchy.mp3" id="4_t6kdu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o768u"]
+font = ExtResource("3_8ew3p")
+font_size = 48
+font_color = Color(0.113725, 0.376471, 0.647059, 0.690196)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.368627)
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_iky7h")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VB" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/VB"]
+layout_mode = 2
+text = "Level 10"
+label_settings = ExtResource("1_70hoe")
+
+[node name="AttemptsLabel" type="Label" parent="MarginContainer/VB"]
+layout_mode = 2
+text = "ATTEMPTS 100"
+label_settings = ExtResource("1_70hoe")
+
+[node name="VB2" type="VBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VB2"]
+layout_mode = 2
+text = "Level Complete"
+label_settings = ExtResource("2_0d5h8")
+
+[node name="Label2" type="Label" parent="MarginContainer/VB2"]
+layout_mode = 2
+text = "PRESS SPACE"
+label_settings = SubResource("LabelSettings_o768u")
+horizontal_alignment = 1
+
+[node name="GameSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t6kdu")
